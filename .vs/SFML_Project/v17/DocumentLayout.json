@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\tgoncalves\\Documents\\GitHub\\SFML_Project\\",
+  "WorkspaceRootPath": "C:\\Users\\T\u00E9o\\Desktop\\GTech\\SFML_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E0B042D4-836A-44FC-BE91-CB47BDAB38B4}|SFML_Project\\SFML_Project.vcxproj|C:\\Users\\tgoncalves\\Documents\\GitHub\\SFML_Project\\SFML_Project\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{E0B042D4-836A-44FC-BE91-CB47BDAB38B4}|SFML_Project\\SFML_Project.vcxproj|C:\\Users\\T\u00E9o\\Desktop\\GTech\\SFML_Project\\SFML_Project\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E0B042D4-836A-44FC-BE91-CB47BDAB38B4}|SFML_Project\\SFML_Project.vcxproj|solutionrelative:SFML_Project\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\tgoncalves\\Documents\\GitHub\\SFML_Project\\SFML_Project\\main.cpp",
+              "DocumentMoniker": "C:\\Users\\T\u00E9o\\Desktop\\GTech\\SFML_Project\\SFML_Project\\main.cpp",
               "RelativeDocumentMoniker": "SFML_Project\\main.cpp",
-              "ToolTip": "C:\\Users\\tgoncalves\\Documents\\GitHub\\SFML_Project\\SFML_Project\\main.cpp",
+              "ToolTip": "C:\\Users\\T\u00E9o\\Desktop\\GTech\\SFML_Project\\SFML_Project\\main.cpp",
               "RelativeToolTip": "SFML_Project\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAcAAAAAAAAAA==",
+              "ViewState": "AQIAABkBAAAAAAAAAAAqwDABAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-22T11:30:37.65Z",
               "EditorCaption": ""
