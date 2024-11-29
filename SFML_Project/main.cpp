@@ -244,6 +244,16 @@ void cheat() {
 
 }
 
+void drawEndMenu(Font& font) {
+    Text winText;
+    winText.setFont(font);
+    winText.setString("Appuyez sur 'R' pour recommencer ou 'Q' pour quitter.");
+    winText.setCharacterSize(30);
+    winText.setFillColor(Color::Black);
+    winText.setPosition(650, 400);
+    window.draw(winText);
+}
+
 int main() {
     srand(time(0));
     Font font;
@@ -266,57 +276,90 @@ int main() {
     int playery = 0;
     int mousex = 0;
     int mousey = 0;
+    bool run = true;
     while (window.isOpen()) {
         Event event;
         while (window.pollEvent(event)) {
             if (event.type == Event::Closed)
                 window.close();
         }
-        if (Mouse::isButtonPressed(Mouse::Left) && Mouse::getPosition().y >430 && Mouse::getPosition().y < 1030 && Mouse::getPosition().x > 860 && Mouse::getPosition().x < 1457) {
-            mousey = (Mouse::getPosition().y - 430) / 60;
-            mousex = (Mouse::getPosition().x - 860) / 60;
-            if ((mousey - playery == 1 || mousey - playery == 0 || mousey - playery == -1) && (mousex - playerx == 1 || mousex - playerx == 0 || mousex - playerx == -1))
-            {
-                if (mousey - playery == 0 && mousex - playerx == 0) {}
-                else tab[mousey][mousex].ispaint = true;
-            }
-        }
-        if (Mouse::isButtonPressed(Mouse::Right) && Mouse::getPosition().y > 430 && Mouse::getPosition().y < 1030 && Mouse::getPosition().x > 860 && Mouse::getPosition().x < 1457) {
-            mousey = (Mouse::getPosition().y - 430) / 60;
-            mousex = (Mouse::getPosition().x - 860) / 60;
-            if ((mousey - playery == 1 || mousey - playery == 0 || mousey - playery == -1) && (mousex - playerx == 1 || mousex - playerx == 0 || mousex - playerx == -1))
-            {
-                if (mousey - playery == 0 && mousex - playerx == 0) {}
-                else tab[mousey][mousex].iscross = true;
-            }
-        }
-        if (Mouse::isButtonPressed(Mouse::Middle) && Mouse::getPosition().y > 430 && Mouse::getPosition().y < 1030 && Mouse::getPosition().x > 860 && Mouse::getPosition().x < 1457) {
-            tab[(Mouse::getPosition().y - 430) / 60][(Mouse::getPosition().x - 860) / 60].ispaint = false;
-            tab[(Mouse::getPosition().y - 430) / 60][(Mouse::getPosition().x - 860) / 60].iscross = false;
-        }
-        if (moveClock.getElapsedTime().asSeconds() >= moveDelay) {
-            if (Keyboard::isKeyPressed(Keyboard::Z) && playery > 0 && !tab[playery - 1][playerx].ispaint && !tab[playery - 1][playerx].iscross) {
-                player.move(Vector2f(0, -60)); playery -= 1; moveClock.restart();
-            }
-            if (Keyboard::isKeyPressed(Keyboard::S) && playery < 9 && !tab[playery + 1][playerx].ispaint && !tab[playery + 1][playerx].iscross) {
-                player.move(Vector2f(0, 60)); playery += 1;moveClock.restart();
-            }
-            if (Keyboard::isKeyPressed(Keyboard::D) && playerx < 9 && !tab[playery][playerx+1].ispaint && !tab[playery][playerx + 1].iscross) {
-                player.move(Vector2f(60, 0)); playerx += 1;moveClock.restart();
-            }
-            if (Keyboard::isKeyPressed(Keyboard::Q) && playerx > 0 && !tab[playery][playerx-1].ispaint && !tab[playery][playerx - 1].iscross) {
-                player.move(Vector2f(-60, 0)); playerx -= 1;moveClock.restart();
-            }
-            if (Keyboard::isKeyPressed(Keyboard::Escape)) window.close();
-            if (Keyboard::isKeyPressed(Keyboard::K)) cheat();
-            if (Keyboard::isKeyPressed(Keyboard::R)) reset();
-            if (win()) { window.close(); cout << "\n\n\n\n\n\n\n\nYOU WIN !!!\n\n\n\n\n\n\n\n"; }
+        if(run)
+        {
 
+            if (Mouse::isButtonPressed(Mouse::Left) && Mouse::getPosition().y > 430 && Mouse::getPosition().y < 1030 && Mouse::getPosition().x > 860 && Mouse::getPosition().x < 1457) {
+                mousey = (Mouse::getPosition().y - 430) / 60;
+                mousex = (Mouse::getPosition().x - 860) / 60;
+                if ((mousey - playery == 1 || mousey - playery == 0 || mousey - playery == -1) && (mousex - playerx == 1 || mousex - playerx == 0 || mousex - playerx == -1))
+                {
+                    if (mousey - playery == 0 && mousex - playerx == 0) {}
+                    else tab[mousey][mousex].ispaint = true;
+                }
+            }
+            if (Mouse::isButtonPressed(Mouse::Right) && Mouse::getPosition().y > 430 && Mouse::getPosition().y < 1030 && Mouse::getPosition().x > 860 && Mouse::getPosition().x < 1457) {
+                mousey = (Mouse::getPosition().y - 430) / 60;
+                mousex = (Mouse::getPosition().x - 860) / 60;
+                if ((mousey - playery == 1 || mousey - playery == 0 || mousey - playery == -1) && (mousex - playerx == 1 || mousex - playerx == 0 || mousex - playerx == -1))
+                {
+                    if (mousey - playery == 0 && mousex - playerx == 0) {}
+                    else tab[mousey][mousex].iscross = true;
+                }
+            }
+            if (Mouse::isButtonPressed(Mouse::Middle) && Mouse::getPosition().y > 430 && Mouse::getPosition().y < 1030 && Mouse::getPosition().x > 860 && Mouse::getPosition().x < 1457) {
+                tab[(Mouse::getPosition().y - 430) / 60][(Mouse::getPosition().x - 860) / 60].ispaint = false;
+                tab[(Mouse::getPosition().y - 430) / 60][(Mouse::getPosition().x - 860) / 60].iscross = false;
+            }
+            if (moveClock.getElapsedTime().asSeconds() >= moveDelay) {
+                if (Keyboard::isKeyPressed(Keyboard::Z) && playery > 0 && !tab[playery - 1][playerx].ispaint && !tab[playery - 1][playerx].iscross) {
+                    player.move(Vector2f(0, -60)); playery -= 1; moveClock.restart();
+                }
+                if (Keyboard::isKeyPressed(Keyboard::S) && playery < 9 && !tab[playery + 1][playerx].ispaint && !tab[playery + 1][playerx].iscross) {
+                    player.move(Vector2f(0, 60)); playery += 1;moveClock.restart();
+                }
+                if (Keyboard::isKeyPressed(Keyboard::D) && playerx < 9 && !tab[playery][playerx + 1].ispaint && !tab[playery][playerx + 1].iscross) {
+                    player.move(Vector2f(60, 0)); playerx += 1;moveClock.restart();
+                }
+                if (Keyboard::isKeyPressed(Keyboard::Q) && playerx > 0 && !tab[playery][playerx - 1].ispaint && !tab[playery][playerx - 1].iscross) {
+                    player.move(Vector2f(-60, 0)); playerx -= 1;moveClock.restart();
+                }
+                if (Keyboard::isKeyPressed(Keyboard::Escape)) run = false;
+                if (Keyboard::isKeyPressed(Keyboard::K)) cheat();
+                if (Keyboard::isKeyPressed(Keyboard::R)) reset();
+                if (win()) { run = false; cout << "\n\n\n\n\n\n\n\nYOU WIN !!!\n\n\n\n\n\n\n\n"; }
+
+            }
+            window.clear(Color(55, 225, 225));
+            window.draw(player);
+            drawmap(font);
+            window.display();
         }
-        window.clear(Color(55, 225, 225));
-        window.draw(player);
-        drawmap(font);
-        window.display();
+        else { // Lorsque run est false, le jeu est terminé, donc le menu de fin est affiché
+            window.clear(Color(55, 225, 225));
+
+            // Si R est pressé, le jeu redémarre
+            if (Keyboard::isKeyPressed(Keyboard::R)) {
+                resetgame();
+                reset();
+                spawn();
+                rowIndices = calculateRowIndices();
+                colIndices = calculateColIndices();
+                player.setPosition(Vector2f(855, 400));
+                playerx = 0;
+                playery = 0;
+                run = true; // Reprend le jeu
+            }
+
+            // Si Q est pressé, on ferme la fenêtre
+            if (Keyboard::isKeyPressed(Keyboard::Q)) {
+                window.close();
+            }
+
+            // Affichage du menu de fin
+            drawEndMenu(font);
+
+            window.display();
+        }
+
+
     }
 
     return 0;
