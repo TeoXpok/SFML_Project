@@ -271,6 +271,9 @@ void drawControle(Font& font) {
     Text.setFillColor(Color::Black);
     Text.setPosition(50, 250);
     window.draw(Text);
+    Text.setString("Ce jeu est inspire du jeu de \nlogique 'Nonogramme' \n\nCependant vous n'etes en \ncapacite de dessiner qu'autour \nde votre personnage ! \n(la gomme a une porte infini)\n\nDe plus les cases coloriees \nainsi que les croix posees \nseront des murs pour votre \npersonnage !");
+    Text.setPosition(1500, 250);
+    window.draw(Text);
 }
 
 int main() {
