@@ -154,6 +154,16 @@ void spawn() {
         y += 60;
         x = 860;
     }
+    RectangleShape minicolumn(Vector2f(5, 605));
+    RectangleShape miniline(Vector2f(605, 5));
+    minicolumn.setFillColor(Color::Black);
+    miniline.setFillColor(Color::Black);
+    minicolumn.setPosition(Vector2f(850, 395));
+    miniline.setPosition(Vector2f(850, 395));
+    maps.push_back(minicolumn); 
+    maps.push_back(miniline);
+    
+
     generategame();
 }
 

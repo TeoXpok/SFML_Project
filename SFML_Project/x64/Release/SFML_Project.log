@@ -29,16 +29,16 @@ C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(150,40):
           [
               T=float
           ]
-C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(179,15): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(186,33): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(186,30): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(194,15): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(202,33): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(202,30): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(280,15): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(189,15): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(196,33): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(196,30): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(204,15): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(212,33): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(212,30): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(290,15): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
   Génération de code en cours
-  2 of 275 functions ( 0.7%) were compiled, the rest were copied from previous compilation.
+  1 of 275 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    1 functions had inline decision re-evaluated but remain unchanged
   Fin de la génération du code
   SFML_Project.vcxproj -> C:\Users\tgoncalves\Documents\GitHub\SFML_Project\x64\Release\SFML_Project.exe
