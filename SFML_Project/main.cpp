@@ -243,15 +243,34 @@ void cheat() {
     }
 
 }
-
-void drawEndMenu(Font& font) {
+void drawWin(Font& font) {
     Text winText;
     winText.setFont(font);
-    winText.setString("Appuyez sur 'R' pour recommencer ou 'Q' pour quitter.");
+    winText.setString("Bravo vous avez gagne !!");
     winText.setCharacterSize(30);
     winText.setFillColor(Color::Black);
-    winText.setPosition(650, 400);
+    winText.setPosition(825, 300);
     window.draw(winText);
+}
+
+void drawEndMenu(Font& font) {
+    Text endText;
+    endText.setFont(font);
+    endText.setString("Appuyez sur 'R' pour recommencer ou 'Q' pour quitter.");
+    endText.setCharacterSize(30);
+    endText.setFillColor(Color::Black);
+    endText.setPosition(650, 400);
+    window.draw(endText);
+}
+
+void drawControle(Font& font) {
+    Text Text;
+    Text.setFont(font);
+    Text.setString("Utilisez 'Z' 'Q' 'S' 'D' \npour vous deplacer   \n\nUtilisez le clic gauche \npour dessiner    \n\nUtilisez le clic droit \npour mettre des croix    \n\nUtilisez le clic molette \npour gommer    \n\nBon courage !");
+    Text.setCharacterSize(30);
+    Text.setFillColor(Color::Black);
+    Text.setPosition(50, 250);
+    window.draw(Text);
 }
 
 int main() {
@@ -277,6 +296,7 @@ int main() {
     int mousex = 0;
     int mousey = 0;
     bool run = true;
+    bool victory = false;
     while (window.isOpen()) {
         Event event;
         while (window.pollEvent(event)) {
@@ -324,18 +344,19 @@ int main() {
                 if (Keyboard::isKeyPressed(Keyboard::Escape)) run = false;
                 if (Keyboard::isKeyPressed(Keyboard::K)) cheat();
                 if (Keyboard::isKeyPressed(Keyboard::R)) reset();
-                if (win()) { run = false; cout << "\n\n\n\n\n\n\n\nYOU WIN !!!\n\n\n\n\n\n\n\n"; }
+                if (win()) { run = false; victory = true; }
 
             }
             window.clear(Color(55, 225, 225));
             window.draw(player);
             drawmap(font);
+            drawControle(font);
             window.display();
         }
-        else { // Lorsque run est false, le jeu est terminé, donc le menu de fin est affiché
+        else {
             window.clear(Color(55, 225, 225));
 
-            // Si R est pressé, le jeu redémarre
+           
             if (Keyboard::isKeyPressed(Keyboard::R)) {
                 resetgame();
                 reset();
@@ -345,15 +366,16 @@ int main() {
                 player.setPosition(Vector2f(855, 400));
                 playerx = 0;
                 playery = 0;
-                run = true; // Reprend le jeu
+                run = true; 
+                victory = false;
             }
 
-            // Si Q est pressé, on ferme la fenêtre
+           
             if (Keyboard::isKeyPressed(Keyboard::Q)) {
                 window.close();
             }
-
-            // Affichage du menu de fin
+            if (victory) drawWin(font);
+            
             drawEndMenu(font);
 
             window.display();

@@ -1,44 +1,44 @@
 ﻿  main.cpp
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(109,37): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(109,37): warning C4244:         with
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(109,37): warning C4244:         [
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(109,37): warning C4244:             T=float
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(109,37): warning C4244:         ]
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(110,40): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(110,40): warning C4244:         with
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(110,40): warning C4244:         [
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(110,40): warning C4244:             T=float
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(110,40): warning C4244:         ]
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(135,44): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(135,44): warning C4244:         with
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(135,44): warning C4244:         [
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(135,44): warning C4244:             T=float
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(135,44): warning C4244:         ]
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(135,41): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(135,41): warning C4244:         with
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(135,41): warning C4244:         [
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(135,41): warning C4244:             T=float
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(135,41): warning C4244:         ]
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(150,43): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(150,43): warning C4244:         with
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(150,43): warning C4244:         [
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(150,43): warning C4244:             T=float
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(150,43): warning C4244:         ]
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(150,40): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(150,40): warning C4244:         with
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(150,40): warning C4244:         [
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(150,40): warning C4244:             T=float
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(150,40): warning C4244:         ]
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(179,15): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(186,33): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(186,30): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(194,15): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(202,33): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(202,30): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-C:\Users\Téo\Desktop\GTech\SFML_Project\SFML_Project\main.cpp(258,15): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(109,37): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(110,40): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(135,44): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(135,41): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(150,43): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(150,40): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(179,15): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(186,33): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(186,30): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(194,15): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(202,33): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(202,30): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\tgoncalves\Documents\GitHub\SFML_Project\SFML_Project\main.cpp(277,15): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
   Génération de code en cours
-  16 of 273 functions ( 5.9%) were compiled, the rest were copied from previous compilation.
+  2 of 275 functions ( 0.7%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   Fin de la génération du code
-  SFML_Project.vcxproj -> C:\Users\Téo\Desktop\GTech\SFML_Project\x64\Release\SFML_Project.exe
+  SFML_Project.vcxproj -> C:\Users\tgoncalves\Documents\GitHub\SFML_Project\x64\Release\SFML_Project.exe
