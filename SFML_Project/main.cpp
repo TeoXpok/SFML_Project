@@ -67,6 +67,35 @@ vector<vector<int>> calculateColIndices() {
     return indices;
 }
 
+void generategame(){
+    int x;
+    int y;
+    bool set = false;
+    for (size_t i = 0; i < 50; i++)
+    {
+        while (!set) {
+            x = rand() % 10;
+            y = rand() % 10;
+            if (!tab[y][x].isgood) {
+                tab[y][x].isgood = true;
+                set = true;
+            }
+        }
+        set = false;
+    }
+}
+
+void resetgame() {
+    for (size_t i = 0; i < 10; i++)
+    {
+        for (size_t j = 0; j < 10; j++)
+        {
+            tab[i][j].isgood = false;
+            tab[i][j].ispaint = false;
+            tab[i][j].iscross = false;
+        }
+    }
+}
 
 void spawn() {
     RectangleShape column(Vector2f(5, 905));
@@ -125,20 +154,7 @@ void spawn() {
         y += 60;
         x = 860;
     }
-    bool set = false;
-    for (size_t i = 0; i < 50; i++)
-    {
-        while (!set) {
-            x = rand() % 10;
-            y = rand() % 10;
-            if (!tab[y][x].isgood) {
-                tab[y][x].isgood = true;
-                set = true;
-            }
-        }
-        set = false;
-    }
-
+    generategame();
 }
 
 void drawmap(Font& font) {
@@ -261,8 +277,8 @@ int main() {
             mousex = (Mouse::getPosition().x - 860) / 60;
             if ((mousey - playery == 1 || mousey - playery == 0 || mousey - playery == -1) && (mousex - playerx == 1 || mousex - playerx == 0 || mousex - playerx == -1))
             {
-                if (mousey - playery == 0 && mousex - playerx == 0) { window.close(); cout << "\n\n\n\n\n\n\n\nYOU DIE !!!\n\n\n\n\n\n\n\n"; }
-                tab[mousey][mousex].ispaint = true;
+                if (mousey - playery == 0 && mousex - playerx == 0) {}
+                else tab[mousey][mousex].ispaint = true;
             }
         }
         if (Mouse::isButtonPressed(Mouse::Right) && Mouse::getPosition().y > 430 && Mouse::getPosition().y < 1030 && Mouse::getPosition().x > 860 && Mouse::getPosition().x < 1457) {
@@ -270,8 +286,8 @@ int main() {
             mousex = (Mouse::getPosition().x - 860) / 60;
             if ((mousey - playery == 1 || mousey - playery == 0 || mousey - playery == -1) && (mousex - playerx == 1 || mousex - playerx == 0 || mousex - playerx == -1))
             {
-                if (mousey - playery == 0 && mousex - playerx == 0) { window.close(); cout << "\n\n\n\n\n\n\n\nYOU DIE !!!\n\n\n\n\n\n\n\n"; }
-                tab[mousey][mousex].iscross = true;
+                if (mousey - playery == 0 && mousex - playerx == 0) {}
+                else tab[mousey][mousex].iscross = true;
             }
         }
         if (Mouse::isButtonPressed(Mouse::Middle) && Mouse::getPosition().y > 430 && Mouse::getPosition().y < 1030 && Mouse::getPosition().x > 860 && Mouse::getPosition().x < 1457) {
